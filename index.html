@@ -1,10 +1,22 @@
-<div> 
-  <h1>結果一覧</h1>
+<div>
+    <h1>結果一覧</h1>
 
-  <a href="page1.html">結果1</a><br>
-  <a href="page2.html">結果2</a><br>
-  <a href="page3.html">結果3</a><br>
+    <div id="link-container"></div>
 
+    <script>
+      const container = document.getElementById('link-container');
+      for (let i = 1; i <= 1000; i++) {
+        const link = document.createElement('a');
+        link.href = `page${i}.html`; 
+        link.textContent = `結果${i}`;
+        link.style.display = 'block'; 
+        container.appendChild(link);
+      }
+    </script>
+</div>
+<hr>
+
+  
   <hr>
 </div>   
 <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
